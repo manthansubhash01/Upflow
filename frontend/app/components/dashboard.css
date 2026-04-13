@@ -1,0 +1,206 @@
+/* Upflow Calendar Styling */
+
+.upflow-calendar {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* Calendar Header */
+.upflow-calendar .fc-toolbar {
+  padding: 0 0 1.5rem 0 !important;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.upflow-calendar .fc-toolbar-title {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: #2a2e42 !important;
+  margin: 0 !important;
+}
+
+/* Navigation Buttons */
+.upflow-calendar .fc-button {
+  background-color: #faf9ff !important;
+  border-color: #e7e3f1 !important;
+  border-width: 1px !important;
+  color: #5f3bd6 !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 0.875rem !important;
+  border-radius: 0.5rem !important;
+  transition:
+    background-color 0.2s,
+    color 0.2s !important;
+  text-shadow: none !important;
+}
+
+.upflow-calendar .fc-button:hover {
+  background-color: #f0ebff !important;
+  color: #5f3bd6 !important;
+}
+
+.upflow-calendar .fc-button-active {
+  background-color: #5f3bd6 !important;
+  border-color: #5f3bd6 !important;
+  color: #ffffff !important;
+}
+
+.upflow-calendar .fc-button-group {
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+/* Day Header (Mon, Tue, etc) */
+.upflow-calendar .fc-col-header-cell {
+  background-color: #f8fbff !important;
+  border-color: #e8e4f1 !important;
+  color: #8f94a8 !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  padding: 1rem 0 !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Day Cells */
+.upflow-calendar .fc-daygrid-day {
+  border-color: #e8e4f1 !important;
+  background-color: #ffffff !important;
+}
+
+.upflow-calendar .fc-daygrid-day:hover {
+  background-color: #faf9ff !important;
+}
+
+.upflow-calendar .fc-daygrid-day-frame {
+  min-height: 5rem !important;
+}
+
+.upflow-calendar .fc-daygrid-day-number {
+  color: #2a2e42 !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  padding: 0.5rem !important;
+}
+
+.upflow-calendar .fc-daygrid-day.fc-day-other .fc-daygrid-day-number {
+  color: #c3c7d0 !important;
+}
+
+/* Today Highlight */
+.upflow-calendar .fc-daygrid-day.fc-day-today {
+  background-color: #f0e9ff !important;
+}
+
+.upflow-calendar .fc-daygrid-day.fc-day-today .fc-daygrid-day-frame {
+  border-left: 3px solid #5f3bd6 !important;
+}
+
+/* Events */
+.upflow-calendar .upflow-event {
+  padding: 0.375rem 0.5rem !important;
+  margin: 2px 2px 0 2px !important;
+  border-radius: 0.375rem !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+  box-shadow: 0 2px 4px rgba(43, 45, 92, 0.08) !important;
+  border: none !important;
+}
+
+.upflow-calendar .upflow-event:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(43, 45, 92, 0.12) !important;
+}
+
+.upflow-calendar .fc-event {
+  border: none !important;
+}
+
+.upflow-calendar .fc-event-title {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.upflow-calendar .fc-daygrid-event {
+  margin-bottom: 0.25rem !important;
+  border: none !important;
+}
+
+/* Week View Styling */
+.upflow-calendar .fc-timegrid {
+  border: 1px solid #e8e4f1 !important;
+}
+
+.upflow-calendar .fc-timegrid-slot {
+  border-color: #f0e9ff !important;
+  height: 3rem !important;
+}
+
+.upflow-calendar .fc-col-time {
+  width: 5rem !important;
+}
+
+.upflow-calendar .fc-col-time-part {
+  color: #8f94a8 !important;
+  font-size: 0.8rem !important;
+}
+
+.upflow-calendar .fc-timegrid-body {
+  border-color: #e8e4f1 !important;
+}
+
+/* Day View */
+.upflow-calendar .fc-timeGridDay-view {
+  border-color: #e8e4f1 !important;
+}
+
+/* Scrollable Area */
+.upflow-calendar .fc-scroller {
+  overflow-y: auto !important;
+}
+
+/* Remove default FullCalendar styling conflicts */
+.upflow-calendar {
+  --fc-border-color: #e8e4f1 !important;
+  --fc-button-bg-color: #faf9ff !important;
+  --fc-button-border-color: #e7e3f1 !important;
+  --fc-button-text-color: #5f3bd6 !important;
+  --fc-button-hover-bg-color: #f0ebff !important;
+  --fc-button-active-bg-color: #5f3bd6 !important;
+  --fc-now-indicator-thickness: 0 !important;
+}
+
+/* Tooltip styling */
+.upflow-calendar .fc-event[title] {
+  cursor: help !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .upflow-calendar .fc-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 1rem;
+  }
+
+  .upflow-calendar .fc-button-group {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .upflow-calendar .fc-daygrid-day-frame {
+    min-height: 4rem !important;
+  }
+}
