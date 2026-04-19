@@ -1,11 +1,18 @@
-"use client";
+import { Suspense } from "react";
+import { AuthContent } from "@/app/auth/AuthContent";
 
-import { useSearchParams } from "next/navigation";
-import AuthForm from "@/app/components/auth/AuthForm";
+function AuthFallback() {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <p className="text-slate-500">Loading...</p>
+    </div>
+  );
+}
 
 export default function AuthPage() {
-  const searchParams = useSearchParams();
-  const mode = searchParams.get("mode") === "signup" ? "signup" : "login";
-
-  return <AuthForm initialMode={mode} showTabs />;
+  return (
+    <Suspense fallback={<AuthFallback />}>
+      <AuthContent />
+    </Suspense>
+  );
 }
