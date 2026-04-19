@@ -9,7 +9,7 @@ const resolveSocketUrl = () => {
     return fromEnv.replace(/\/$/, "");
   }
 
-  return "http://localhost:4000";
+  return "https://upflow-y50u.onrender.com";
 };
 
 export function getSocket(token: string): Socket {

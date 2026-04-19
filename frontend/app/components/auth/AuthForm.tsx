@@ -398,7 +398,7 @@ export default function AuthForm({
             </div>
 
             <a
-              href={`${process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:4000"}/api/auth/google`}
+              href={`${process.env.NEXT_PUBLIC_API_BASE_URL || "https://upflow-y50u.onrender.com"}/api/auth/google`}
               onClick={persistInviteTokenForOAuth}
               className="w-full rounded-full border-2 border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 flex items-center justify-center gap-2"
             >
