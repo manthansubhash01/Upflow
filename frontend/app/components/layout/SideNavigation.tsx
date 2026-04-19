@@ -16,11 +16,13 @@ import { useAuth } from "@/app/components/AuthProvider";
 
 interface SideNavigationProps {
   workspaceId?: string;
+  projectId?: string;
   onLogout: () => void;
 }
 
 export default function SideNavigation({
   workspaceId = "workspace-1",
+  projectId: _projectId,
   onLogout,
 }: SideNavigationProps) {
   const router = useRouter();
